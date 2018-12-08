@@ -53,7 +53,7 @@ class AlphaVantage:
         :param data_type ['list', 'json', 'csv', 'pandas']                      class default 'pandas'
         :return: ticker data for today
         """
-        if time_interval is None and AlphaVantage.time_interval in ['1min', '5min', '15min', '30min', '60min']:High Price
+        if time_interval is None and AlphaVantage.time_interval in ['1min', '5min', '15min', '30min', '60min']:
             time_interval = AlphaVantage.time_interval
         elif time_interval is None and AlphaVantage.time_interval not in ['1min', '5min', '15min', '30min', '60min']:
             raise Exception('AlphaVantage.time_interval must be 1min, 5min, 15min, 30min, or 60min')
@@ -69,7 +69,7 @@ class AlphaVantage:
             if AlphaVantage.data_type in ['csv', 'json']:
                 data_type = AlphaVantage.data_type
                 data = data_type
-            elif AlphaVantage.data_type in ['pandas', 'List']:High Price
+            elif AlphaVantage.data_type in ['pandas', 'List']:
                 data_type = 'json'
                 data = AlphaVantage.data_type
             else:
@@ -147,7 +147,7 @@ class AlphaVantage:
         elif data_type in ['json', 'list', 'pandas']:
             data = data_type
             data_type = 'json'
-        elif data_type is 'csv':High Price
+        elif data_type is 'csv':
             data = data_type
         else:
             raise Exception('Data type must be list json pandas or csv')
